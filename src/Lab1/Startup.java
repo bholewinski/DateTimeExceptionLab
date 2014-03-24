@@ -6,7 +6,10 @@ package Lab1;
 public class Startup {
 
     public static void main(String[] args) {
-        // TODO code application logic here
+        Invoice i = new Invoice();
+        
+        i.getDueDateAsCalendar();
+        i.getDueDateAsString();
     }
     
 }
