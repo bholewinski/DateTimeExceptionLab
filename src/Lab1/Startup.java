@@ -8,7 +8,7 @@ public class Startup {
     public static void main(String[] args) {
         Invoice i = new Invoice();
         
-        i.getDueDateAsCalendar();
+        i.calcDueDateAsCalendar();
         i.getDueDateAsString();
     }
     

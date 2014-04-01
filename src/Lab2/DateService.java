@@ -13,8 +13,8 @@ import java.util.logging.Logger;
 public class DateService {
     private Date date1 = new Date();
     private Calendar date2 = Calendar.getInstance();
-    private final String MYDATESTRING = "M/dd/yyyy";
-    private final String MYCALENDARSTRING = "MMM dd, yyyy hh:mm a";
+    private final String MYDATESTRING = "M/d/yyyy";
+    private final String MYCALENDARSTRING = "MMMM dd, yyyy h:mm a";
     private SimpleDateFormat stringToDate = new SimpleDateFormat(MYDATESTRING);
     private SimpleDateFormat stringToCalendar = new SimpleDateFormat(MYCALENDARSTRING);
     

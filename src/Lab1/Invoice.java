@@ -8,23 +8,29 @@ import java.util.Date;
  * @author Ben Holewinski
  */
 public class Invoice {
-    private Calendar invoiceDate = Calendar.getInstance();
-    private int gracePeriod = 15;
+    private Calendar invoiceDate;
+    private int gracePeriod;
     private Calendar dueDate;
+
+    //All initialization should occur in the constructor
+    public Invoice() {
+        invoiceDate = Calendar.getInstance();
+        gracePeriod = 15;
+    }
     
-    public final void getDueDateAsCalendar() {
+    public final void calcDueDateAsCalendar() {
         setDueDate(invoiceDate);
         dueDate.add(Calendar.DATE, gracePeriod);
         System.out.println(dueDate);
     }
     
-    public final void getDueDateAsString() {
+    public final String getDueDateAsString() {
         Date date1;
         DateFormat df = DateFormat.getDateInstance(DateFormat.MEDIUM);
         date1 = dueDate.getTime();
         String s = df.format(date1);
         
-        System.out.println(s);
+        return s;
     }
 
     public final Calendar getInvoiceDate() {
